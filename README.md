@@ -5,7 +5,7 @@ A PocketMine-MP plugin that adds kits to your server with many features and supp
 
 *Forked from: https://poggit.pmmp.io/p/AdvancedKits/*
 
-*Note: This Plugin is modified for PMnS.
+*Note: This Plugin is modified for PMnS.*
 
 **Commands:**
 The main command: /ak
