@@ -1,60 +1,18 @@
-AdvancedKits
+AdvancedKits-PMnS
 ============
 
 A PocketMine-MP plugin that adds kits to your server with many features and support for UIs (FormAPI plugin) and custom enchantments (PiggyCustomEnchants)
 
-*Latest release: https://poggit.pmmp.io/p/AdvancedKits/*
+*Forked from: https://poggit.pmmp.io/p/AdvancedKits/*
 
-*Latest development phars: https://poggit.pmmp.io/ci/luca28pet/AdvancedKits/AdvancedKits*
-
-This plugin only supports PocketMine-MP. It might work on other forks as well, but please Do NOT open issues if you have problems with AdvancedKits and you are using a fork.
-
-**Features overview:**
-
-- Highly configurable
-- UI (user interface) support using libFormAPI (already included in the phars)
-- Custom enchantments support using PiggyCustomEnchants plugin
-- Custom permissions support
-- Built in permissions system if you don't want to use any permissions manager (see kits.yml)
-- Economy support: pay to get a kit. Support for EconomyS, PocketMoney and MassiveEconomy
-- Sign support: write a sign to let users get a kit
-- Time limit (cooldown) for kits
-- Option for one kit per life (see config.yml)
-- Execute commands with kits
-- Easy translation system
+*Note: This Plugin is modified for PMnS.
 
 **Commands:**
-The main command: /kit
-Alias for /kit: /ak, /advancedkits .
+The main command: /ak
+Alias for /ak: /advancedkits .
 
-- /kit [kitname] - Selects a kit. If no argument is kit name, opens the UI if possible or display a list of available kits.
+- /ak [kitname] - Selects a kit. If no argument is kit name, opens the UI if possible or display a list of available kits.
 - /akreload - reloads kits.yml (when edited while the server is running)
-
-
-
-**Signs:**
-To let users get a kit through a sign, you can create one like this: (capitals don't matter)
-
-Line 1: [AdvancedKits]
-
-Line 2: kitname
-
-Line 3 & 4: Whatever you like
-
-
-The default kit is: testkit.
-You can add kits editing kits.yml (see "Kit settings").
-
-**UI support:**
-You don't need to install the plugin FormAPI as it is already included in the latest phars from poggit.
-To let users select a kit using a UI, enable 'show-form-no-args' in the config.yml
-Then, to open the UI, use /kit
-If you run this plugin in folder format, you will have to use DEVirion and manually install FormAPI, or disable 'show-form-no-args' in the config.yml
-
-**Permissions:**
-If 'permissions-mode' in the config.yml is true: with the permission advancedkits.kitname, a player will be able to get the kit named "kitname".
-Note: in the permission, the kit name HAS to be ALL in lowercase letters.
-If 'permissions-mode' in the config.yml is false, you can specify in the kits.yml which users (and in which worlds) can get a kit. (see kit settings)
 
 **Kit Settings:**
 
@@ -123,31 +81,4 @@ testkit:
   img-data: ''
   # How the kit is displayed on the form
   form-name: 'Test Kit: 50$'
-```
-
-You can find a list of available enchantments in the file Enchantment.php in the pmmp source code: https://github.com/pmmp/PocketMine-MP/blob/master/src/pocketmine/item/enchantment/Enchantment.php
-
-If you don't specify users or world, then the kit will be available to all users or in all worlds.
-If 'permissions-mode' in the config.yml is true, these parameters will be ignored
-
-
-**Translations:**
-
-You can easily translate plugin messages by editing the lang.properties file inside the plugin folder. Remember to don't change the "lang-version" parameter, as it is used for internal proposes.
-
-**Config:**
-```
----
-# Users are able to get only one kit per life
-one-kit-per-life: true
-
-# Users are able to get a kit if they log out even if they did not die (only works if one-kit-per-life: true)
-reset-on-logout: true
-
-# Use built in permission system even if using PurePerms
-force-builtin-permissions: false
-
-# Sign text (capitals and color codes don't matter)
-sign-text: "[AdvancedKits]"
-...
 ```
