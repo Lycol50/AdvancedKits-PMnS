@@ -74,7 +74,7 @@ class Main extends PluginBase{
 
     public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
         switch(strtolower($command->getName())){
-            case 'kit':
+            case 'ak':
                 if(!($sender instanceof Player)){
                     $sender->sendMessage($this->langManager->getTranslation('in-game'));
                     return true;
